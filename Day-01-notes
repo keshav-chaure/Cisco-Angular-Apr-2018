@@ -1,0 +1,38 @@
+variable hoisting
+
+1. let
+2. const
+3. array destructuring
+4. rest operator
+5. spread operator
+6. default arguments
+7. arrow functions
+8. template strings
+9. classes
+10. Inheritence
+
+
+
+http://es6-features.org
+
+http://typescriptlang.org
+
+Array methods
+	- map
+	- reduce
+	- forEach
+	- filter
+
+
+var products = [
+	{id : 6, name : 'Pen', cost : 50, units : 20, category : 'stationary'},
+	{id : 9, name : 'Ten', cost : 70, units : 70, category : 'stationary'},
+	{id : 3, name : 'Len', cost : 60, units : 60, category : 'grocery'},
+	{id : 5, name : 'Zen', cost : 30, units : 30, category : 'grocery'},
+	{id : 1, name : 'Ken', cost : 20, units : 80, category : 'utencil'},
+];
+
+1. filter all stationary products (use filter)
+2. apply 10% discount for all the products (use map)
+3. find the sum of units of all products (use reduce)
+
