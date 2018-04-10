@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GreeterComponent } from './greeter/greeter.component';
 
 /*
 declarations 
@@ -23,7 +24,8 @@ imports
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GreeterComponent
   ],
   imports: [
     BrowserModule
