@@ -1,7 +1,7 @@
 <h1>Calculator-1</h1>
 <hr>
-<input type="number" #txtNumber1 (change)="setN1(txtNumber1.valueAsNumber)">
-<input type="number" #txtNumber2 (change)="setN2(txtNumber2.valueAsNumber)">
+<input type="number"  (change)="setN1($event.target.valueAsNumber)">
+<input type="number"  (change)="setN2($event.target.valueAsNumber)">
 <input type="button" value="Add" (click)="onAddClick()">
 <input type="button" value="Subtract" (click)="onSubtractClick()">
 <input type="button" value="Multiply" (click)="onMultiplyClick()">
