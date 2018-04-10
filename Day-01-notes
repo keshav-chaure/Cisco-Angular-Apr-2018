@@ -33,6 +33,28 @@ var products = [
 ];
 
 1. filter all stationary products (use filter)
+
+var stationaryProducts = products.filter(function(product){
+	return product.category === 'stationary';
+});
+
+var stationaryProducts = products.filter(p => p.category === 'stationary')
+
 2. apply 10% discount for all the products (use map)
+
+var discountedProducts = products.map(function(product){
+	return {...product, cost : product.cost * 0.9 };
+})
+
+var discountedProducts = products.map(product => ({...product, cost : product.cost * 0.9 }));
+
+
 3. find the sum of units of all products (use reduce)
+
+var totalStock = products.reduce(function(prevResult, product){
+	return prevResult + product.units;
+}, 0)
+
+var totalStock = products.reduce((prevResult, product) => prevResult + product.units, 0)
+
 
