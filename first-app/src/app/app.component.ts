@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  currentTime = Date();
+  timerId = 0;
+
+  constructor(){
+
+  }
+
+  stopTimer(){
+  	clearInterval(this.timerId);
+  }
+
+  ngOnInit(){
+  	  this.timerId = setInterval(() => this.currentTime = Date())
+  }
 }
