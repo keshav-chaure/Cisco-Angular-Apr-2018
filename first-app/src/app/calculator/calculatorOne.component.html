@@ -1,9 +1,9 @@
 <h1>Calculator-1</h1>
 <hr>
-<input type="number" #txtNumber1>
-<input type="number" #txtNumber2>
-<input type="button" value="Add" (click)="onAddClick(txtNumber1.valueAsNumber, txtNumber2.valueAsNumber)">
-<input type="button" value="Subtract" (click)="onSubtractClick(txtNumber1.valueAsNumber, txtNumber2.valueAsNumber)">
-<input type="button" value="Multiply" (click)="onMultiplyClick(txtNumber1.valueAsNumber, txtNumber2.valueAsNumber)">
-<input type="button" value="Divide" (click)="onDivideClick(txtNumber1.valueAsNumber, txtNumber2.valueAsNumber)">
+<input type="number" #txtNumber1 (change)="setN1(txtNumber1.valueAsNumber)">
+<input type="number" #txtNumber2 (change)="setN2(txtNumber2.valueAsNumber)">
+<input type="button" value="Add" (click)="onAddClick()">
+<input type="button" value="Subtract" (click)="onSubtractClick()">
+<input type="button" value="Multiply" (click)="onMultiplyClick()">
+<input type="button" value="Divide" (click)="onDivideClick()">
 <div>{{result}}</div>
