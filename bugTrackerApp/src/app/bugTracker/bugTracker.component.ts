@@ -17,4 +17,8 @@ export class BugTrackerComponent{
 		};
 		this.bugs.push(newBug);
 	}
+
+	onBugNameClick(bugToToggle : Bug){
+		bugToToggle.isClosed = !bugToToggle.isClosed;
+	}
 }
