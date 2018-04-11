@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Bug } from './models/Bug';
+import { BugOperationsService } from './services/bugOperations.service';
 
 
 @Component({
@@ -10,16 +11,15 @@ export class BugTrackerComponent{
 
 	bugs : Bug[] = [];
 
+	bugOperations : BugOperationsService = new BugOperationsService();
+
 	onCreateClick(bugName : string){
-		let newBug : Bug = {
-			name : bugName,
-			isClosed : false
-		};
+		let newBug : Bug = this.bugOperations.createNew(bugName);
 		this.bugs.push(newBug);
 	}
 
 	onBugNameClick(bugToToggle : Bug){
-		bugToToggle.isClosed = !bugToToggle.isClosed;
+		this.bugOperations.toggle(bugToToggle);
 	}
 
 	onRemoveClosedClick(){
