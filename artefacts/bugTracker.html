@@ -1,0 +1,107 @@
+
+<!-- 
+	1. create new application by name bugTrackerApp	
+	2. move all the css styles in the 'src/styles.css'
+	3. create a folder 'bugTracker' in 'app' folder
+	4. create the following files in the 'bugTracker'
+			- bugTracker.component.ts
+				selector = 'app-bug-tracker'
+				component = BugTrackerComponent
+			- BugTracker.component.html
+	5. Modify the app.component.html to display the following
+		<h1>BugTracker</h1>
+		<hr>
+		<app-bug-tracker></app-bug-tracker>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bug Tracker</title>
+	<script type="text/usecases">
+		1. Add new bugs
+		2. List the bugs
+		3. Toggle the 'closed' status of any bug
+		4. Remove closed bugs
+		5. Display stats (# of closed bugs / total # of bugs)
+		6. Improvise bug display
+		7. Sort the bugs
+		8. Persist the bugs in the localStorage
+		9. Display 'createdAt' for each bug
+		10. Persist the bugs in the server
+		11. Make the bugs accessible using unique urls (routing)
+	</script>
+	<style>
+		body{
+			margin-left: 50px;
+		}
+		section{
+			margin-bottom: 10px;
+		}
+		.stats, .bugname {
+			font-size: 20pt;
+		}
+		.closed{
+			color : red;
+			text-decoration: line-through;
+			font-style: italic;
+			font-weight: bold;
+		}
+		.bugname{
+			cursor: pointer;
+		}
+		ol{
+			width : 500px;
+			list-style : none;
+			-webkit-padding-start : 0px;
+		}
+		li{
+			margin-bottom: 10px;
+			border : 1px solid gray;
+			background-color: #e7e7e7;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.datetime{
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<h1>BugTracker</h1>
+	<hr>
+	<section class="stats">
+		<span class="closed">1</span>
+		<span> / </span>
+		<span>2</span>
+	</section>
+	<section class="sort">
+		<label for="">Order By :</label>
+		<select name="" id="">
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+		<label for="">Descending ? :</label>
+		<input type="checkbox" name="" id="">
+	</section>
+	<section class="add">
+		<label for="">Bug Name :</label>
+		<input type="text" name="" id="">
+		<input type="button" value="Create">
+	</section>
+	<section class="list">
+		<ol>
+			<li>
+				<span class="bugname">[This is bug - 1]</span>
+				<div class="datetime">[Created At]</div>
+			</li>
+			<li>
+				<span class="bugname closed">[This is bug - 2]</span>
+				<div class="datetime">[Created At]</div>
+			</li>
+		</ol>
+		<input type="button" value="Remove Closed">
+	</section>
+</body>
+</html>
