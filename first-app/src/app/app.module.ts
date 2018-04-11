@@ -7,6 +7,7 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorOneCompnent } from './calculator/calculatorOne.component';
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
 import { CalculatorResultComponent } from './calculator/calculatorResult.component';
+import { ProductListComponent } from './products/productList.component';
 
 /*
 declarations 
@@ -31,7 +32,8 @@ imports
     GreeterComponent,
     CalculatorOneCompnent,
     CalculatorTwoComponent,
-    CalculatorResultComponent
+    CalculatorResultComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule
