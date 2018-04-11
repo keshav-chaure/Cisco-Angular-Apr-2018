@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorOneCompnent } from './calculator/calculatorOne.component';
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
+import { CalculatorResultComponent } from './calculator/calculatorResult.component';
+
 /*
 declarations 
 	- all the UI entities
@@ -28,7 +30,8 @@ imports
     AppComponent,
     GreeterComponent,
     CalculatorOneCompnent,
-    CalculatorTwoComponent
+    CalculatorTwoComponent,
+    CalculatorResultComponent
   ],
   imports: [
     BrowserModule
