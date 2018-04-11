@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Bug } from './models/Bug';
+
 
 @Component({
 	selector : 'app-bug-tracker',
@@ -6,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class BugTrackerComponent{
 
-	bugs : string[] = [];
+	bugs : Bug[] = [];
 
 	onCreateClick(bugName : string){
-		this.bugs.push(bugName);
+		let newBug : Bug = {
+			name : bugName,
+			isClosed : false
+		};
+		this.bugs.push(newBug);
 	}
 }
