@@ -11,7 +11,15 @@ export class BugTrackerComponent{
 
 	bugs : Bug[] = [];
 
-	bugOperations : BugOperationsService = new BugOperationsService();
+	/*bugOperations : BugOperationsService = null;
+
+	constructor(_bugOperations : BugOperationsService){
+		this.bugOperations = _bugOperations
+	}*/
+
+	constructor(private bugOperations : BugOperationsService){
+		
+	}
 
 	onCreateClick(bugName : string){
 		let newBug : Bug = this.bugOperations.createNew(bugName);
