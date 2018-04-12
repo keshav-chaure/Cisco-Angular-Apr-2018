@@ -18,13 +18,16 @@
 	<input type="button" value="Create" (click)="onCreateClick(txtBugName.value)">
 </section>
 <section class="list">
+	<input type="range" min="25" max="50" value="25" (change)="trimRange = $event.target.value"/>
+	<span>{{trimRange}}</span>
 	<ol>
 		<li *ngFor="let bug of bugs">
 			<span class="bugname" 
 				(click)="onBugNameClick(bug)"
 				[ngClass]="{closed : bug.isClosed}"
+				title="{{bug.name}}"
 			>
-				{{bug | json}}
+				{{bug.name | trimText:trimRange}}
 			</span>
 			<div class="datetime">[Created At]</div>
 		</li>

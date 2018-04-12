@@ -10,7 +10,8 @@ import { BugOperationsService } from './services/bugOperations.service';
 export class BugTrackerComponent{
 
 	bugs : Bug[] = [];
-
+	trimRange : number = 25;
+	
 	/*bugOperations : BugOperationsService = null;
 
 	constructor(_bugOperations : BugOperationsService){
