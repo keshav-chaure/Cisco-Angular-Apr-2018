@@ -24,7 +24,7 @@ export class BugTrackerComponent{
 
 	onCreateClick(bugName : string){
 		let newBug : Bug = this.bugOperations.createNew(bugName);
-		this.bugs.push(newBug);
+		this.bugs = [...this.bugs, newBug];
 	}
 
 	onBugNameClick(bugToToggle : Bug){
