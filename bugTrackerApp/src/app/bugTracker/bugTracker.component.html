@@ -8,11 +8,7 @@
 	<label for="">Descending ? :</label>
 	<input type="checkbox" (change)="sortBugDescending = $event.target.checked">
 </section>
-<section class="add">
-	<label for="">Bug Name :</label>
-	<input type="text" #txtBugName>
-	<input type="button" value="Create" (click)="onCreateClick(txtBugName.value)">
-</section>
+<app-bug-add (create)="onBugCreated($event)" ></app-bug-add>
 <section class="list">
 	<input type="range" min="25" max="50" value="25" (change)="trimRange = $event.target.value"/>
 	<span>{{trimRange}}</span>
