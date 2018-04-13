@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 
 import { UtilsModule } from './utils/utils.module';
 
@@ -12,7 +11,6 @@ import { BugAddComponent } from './bugTracker/views/bugAdd.component';
 
 import { BugOperationsService } from './bugTracker/services/bugOperations.service';
 import { BugStorageService } from './bugTracker/services/bugStorage.service';
-import { BugServerService } from './bugTracker/services/bugServer.service';
 
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
@@ -27,13 +25,11 @@ import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
   ],
   imports: [
     BrowserModule,
-    UtilsModule,
-    HttpModule
+    UtilsModule
   ],
   providers: [
   	BugOperationsService,
-    BugStorageService,
-    BugServerService
+    BugStorageService
   ],
   bootstrap: [AppComponent]
 })
