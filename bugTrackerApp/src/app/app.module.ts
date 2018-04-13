@@ -14,6 +14,7 @@ import { BugStorageService } from './bugTracker/services/bugStorage.service';
 
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
